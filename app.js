@@ -51,7 +51,7 @@ function gunluksiir() {
             ses.src="music/mp3indirdur-Sezen-Aksu-Unuttun-Mu-Beni.mp3";
             gununsiiri = `Bölünür sancıyla uykular\nSığınak değil en kuytular\nGökte ay öndört ben dolunay\nSon hatıramı sinene sar\nBu kadarına razıyım yar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Dalda muhabbette kumrular\nBana ayrılığı sordular\nDedim afet, yangın, dedim kar\nDedim adet aşkı vururlar\nDedim adet aşkı vururlar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı`;
             break;
-        case 29:
+        case 30:
             gununsiiriisim="Unuttun Mu Beni";
             ses.src="music/mp3indirdur-Sezen-Aksu-Unuttun-Mu-Beni.mp3";
             gununsiiri = `Bölünür sancıyla uykular\nSığınak değil en kuytular\nGökte ay öndört ben dolunay\nSon hatıramı sinene sar\nBu kadarına razıyım yar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Dalda muhabbette kumrular\nBana ayrılığı sordular\nDedim afet, yangın, dedim kar\nDedim adet aşkı vururlar\nDedim adet aşkı vururlar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı`;
