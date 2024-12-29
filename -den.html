@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: bisque;
+        }
+
+        .cotainer {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            width: 200px;
+            position: relative;
+            color: aqua;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            border: 2px solid aqua;
+            border-radius: 5px;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        label:before {
+            content: "";
+            height: 30px;
+            width: 30px;
+            border: 3px solid antiquewhite;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: aqua;
+            color: white;
+        }
+
+        input[type="radio"]:checked+label:before {
+            height: 16px;
+            width: 16px;
+            border: 10px solid white;
+            background-color: aqua;
+        }
+
+        .card {
+            transition: opacity 0.5s ease, visibility 0.5s ease; /* Geçiş animasyonu */
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .card.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="searchInput" placeholder="Bir kelime ara..." />
+        <section class="icerik" id="sarkilar">
+            <div class="card" style="width: 18rem;" id="biliyorsun">
+                <img src="ME (1).png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Biliyorsun</h5>
+                    <p class="card-text">Biliyorsun şarkı sözü</p>
+                    <audio controls src="music/BLOK3 - GÜZEL VE İDDİALI.mp3"></audio>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;" id="firuze">
+                <img src="ME (1).png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Firuze</h5>
+                    <p class="card-text">Firuze şarkı sözü</p>
+                    <audio controls src="music/Demet Akalın - Koltuk (Dj Mery Remix) Evde Sıcacık Yatak#tiktok.mp3"></audio>
+                </div>
+            </div>
+        </section>
+    </form>
+    <script>
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            const items = document.querySelectorAll(".card");
+
+            items.forEach(item => {
+                if (item.id.toLowerCase().includes(query)) {
+                    item.classList.remove("hidden"); // Göster
+                } else {
+                    item.classList.add("hidden"); // Gizle (animasyonlu)
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
