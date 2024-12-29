@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Concert+One&family=Pacifico&family=Permanent+Marker&display=swap');
+
+
+
+:root {
+    --imgbg: #fbb6b6;
+    --nav-a-color: #b10303;
+    --nav-a-color-hov: #ff2323;
+    --inp-border-c: #ff9494;
+    --inp-place: #ff5757;
+    --inp-border-c-focus: #b10303;
+    --bg-color: #ffc0c0;
+    --icerik-c: #b10303;
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 200vh;
+}
+
+* {
+    font-size: 20px;
+    font-family: "Acme", serif;
+    font-weight: 600;
+
+    font-style: normal;
+}
+
+
+nav div {
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+nav input {
+    border-radius: 10px;
+    padding-left: 47px;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 4px solid var(--inp-border-c);
+    background-image: url('search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    color: var(--nav-a-color);
+    background-color: var(--bg-color);
+
+}
+
+nav input::placeholder {
+    color: var(--inp-place);
+}
+
+nav input:focus {
+    outline: none;
+    box-shadow: var(--inp-border-c-focus) 0px 3px 8px;
+    transition: all 0.3s ease;
+
+
+}
+
+#eysanres {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+#ezelres {
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: -1000px;
+    top: 0px;
+}
+
+.ana_icerik {
+    display: flex;
+
+    justify-content: center;
+    color: var(--icerik-c);
+}
+
+#sorular {
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    margin-top: 20px;
+
+    margin-right: 30px;
+    color: var(--nav-a-color);
+}
+
+.bolum {
+
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--nav-a-color);
+}
+
+nav a:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.4);
+    color: var(--nav-a-color-hov);
+}
+
+nav>ul>li>button,
+nav>ul>li>button>img {
+    border: none;
+    background-color: transparent;
+}
+
+#logo {
+    width: 100;
+    height: 100px;
+    overflow: hidden;
+    background-color: var(--imgbg);
+    border-radius: 20px;
+}
+
+#siirisim {
+    font-size: 1em;
+}
+
+div p {
+    text-align: center;
+}
+
+#gecegunduz {
+    transition: opacity 0.6s ease-in-out;
+}
+
+/*ses görünüm*/
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--inp-place);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: var(--inp-place);
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    color: #333;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: #333;
+}
+
+audio::-webkit-media-controls-timeline {
+    border-radius: 40px;
+    background-color: var(--inp-place);
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: var(--inp-place);
+    border-radius: 50px;
+
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: var(--inp-place);
+    border-radius: 50%;
+}
+
+
+
+.soruform {
+    align-items: center;
+    justify-content: center;
+margin-left: 0px;
+}
+
+.sanatcı {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+.sanatcı>input[type="radio"] {
+    display: none;
+}
+
+.sanatcı>label {
+
+    width: 350px;
+    position: relative;
+    color: var(--icerik-c);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    border: 2px solid var(--inp-border-c);
+    border-radius: 5px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sanatcı>label:before {
+
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 3px solid var(--icerik-c);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.sanatcı>input[type="radio"]:checked+label {
+    background-color: var(--inp-border-c);
+    color: white;
+}
+hr{
+    border-top: 5px dashed red;
+    width: 350px;
+    margin-left: 120px;
+    border-radius: 10px;
+}
+.sanatcı>input[type="radio"]:checked+label:before {
+    height: 16px;
+    width: 16px;
+    border: 10px solid white;
+    background-color: var(--inp-border-c);
+
+}
+
+
+
+
+/*sarki penceresi tasarım*/
+#sarkibody{
+    background-color: var(--bg-color);
+}
+.icerik{
+    margin-top: 30px;
+}
+.icerik .card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    background-color: var(--inp-border-c);
+    margin-top: 10px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bolum {
+    opacity: 1;
+    visibility: visible;
+    transition: all ease-in 2s;
+    
+}
+.bolum.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in 0.5s; /* Görünürlük ve opasiteyi gizlerken animasyon */
+    
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisan Lina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <div><a target="_blank" href="https://github.com/heisenberg1098"><img id="logo" src="ME (1).png"
+                            alt=""></a></div>
+            </li>
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#siirler">Siirler</a></li>
+            <li><a href="#">Oyunlar</a></li>
+            <li><a href="#sorular">Sorular</a></li>
+            <li><a href="#sarkilar">Sarkılar</a></li>
+            <li><img src="gunes.png" id="gecegunduz" alt=""></li>
+
+            <li><input type="search" placeholder="Arama" name="" id="arama"></li>
+
+        </ul>
+    </nav>
+    <div class="ana_icerik">
+        <div>
+
+            <section id="siirler" class="bolum">
+                <h2>Bu Günün Siiri : <span id="siirisim"></span></h2>
+                <p id="siir"></p>
+                <p><audio id="ses" controls type="audio/mp3"></audio>
+                </p>
+            </section>
+
+            <section id="sorular" class="bolum">
+                <form action="" class="soruform">
+                    <legend>Sorular</legend>
+                    <label>En sevdigim sanatçı ?</label>                                                                                                                                                   
+                    <div class="sanatcı">
+                        <input type="radio" name="sanatcı" id="Blok 3"><label for="Blok 3">Blok 3</label>
+                        <input type="radio" name="sanatcı" id="Sezen Aksu"><label for="Sezen Aksu">Sezen Aksu</label>
+                        <input type="radio" name="sanatcı" id="Ceza"><label for="Ceza">Ceza</label>
+                        <input type="radio" name="sanatcı" id="Niloya"><label for="Niloya">Niloya</label>
+                    </div><hr>
+                    <label>En sevdigim renk ?</label>                                                                                                                                                   
+                    <div class="sanatcı">
+                        <input type="radio" name="renk" id="mavi"><label for="mavi">mavi</label>
+                        <input type="radio" name="renk" id="kırmızı"><label for="kırmızı">kırmızı</label>
+                        <input type="radio" name="renk" id="turuncu"><label for="turuncu">turuncu</label>
+                        <input type="radio" name="renk" id="pembe"><label for="pembe">pembe</label>
+                    </div><hr>
+                    <label>Dogum Günüm Ne Zaman</label>                                                                                                                                                   
+                    <div class="sanatcı">
+                        <input type="radio" name="dogum" id="Mart"><label for="Mart">Mart</label>
+                        <input type="radio" name="dogum" id="Nisan"><label for="Nisan">Nisan</label>
+                        <input type="radio" name="dogum" id="Mayıs"><label for="Mayıs">Mayıs</label>
+                        <input type="radio" name="dogum" id="Aralık"><label for="Aralık">Aralık</label>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="icerik" id="sarkilar">
+                <div class="card" style="width: 18rem;" id="biliyorsun">
+                    <img src="ME (1).png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Biliyorsun</h5>
+                        <p class="card-text">Biliyorsun sarkı sözü</p>
+                        <audio controls src="music/mp3indirdur-Sezen-Aksu-Biliyorsun.mp3"></audio>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;" id="firuze">
+                    <img src="ME (1).png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Firuze</h5>
+                        <p class="card-text">Firuze sarkı sözü</p>
+                        <audio controls src="music/mp3indirdur-Sezen-Aksu-Firuze.mp3"></audio>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;" id="Unuttun Mu Beni">
+                    <img src="ME (1).png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Unuttun Mu Beni</h5>
+                        <p class="card-text">Unuttun Mu Beni sarkı sözü</p>
+                        <audio controls src="music/mp3indirdur-Sezen-Aksu-Unuttun-Mu-Beni.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+            <section>
+
+            </section>
+
+
+            <img src="eysan2.png" alt="" id="eysanres">
+            <img src="ezel2.png" alt="" id="ezelres">
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
