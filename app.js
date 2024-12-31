@@ -56,6 +56,17 @@ function gunluksiir() {
             ses.src="music/mp3indirdur-Sezen-Aksu-Unuttun-Mu-Beni.mp3";
             gununsiiri = `Bölünür sancıyla uykular\nSığınak değil en kuytular\nGökte ay öndört ben dolunay\nSon hatıramı sinene sar\nBu kadarına razıyım yar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Dalda muhabbette kumrular\nBana ayrılığı sordular\nDedim afet, yangın, dedim kar\nDedim adet aşkı vururlar\nDedim adet aşkı vururlar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı`;
             break;
+        case 31:
+            gununsiiriisim="Yaşanmamış Yıllar";
+            ses.src="music/mp3indirdur-Sezen-Aksu-Unuttun-Mu-Beni.mp3";
+            gununsiiri = `Ben beni kendi içimde\n Bilmem arasam bulur muyum\n Yaşanmamış genç yıllarımı\n Ve sebebini suskunluğumun\n Buluşsam orada kendimle\n Ve yaratsam ellerimle\n Küçük bir sırça köşk misali\n Dostlarımla benim evrenimde\n Boş yere değil yok inanmam\n Koşarım yine ardından\n Bulsam da olur bulmasam da\n Bu ümit beni bil yaşatan\n Boş yere değil yok inanmam\n Koşarım yine ardından\n Bulsam da olur bulmasam da\n Bu ümit beni bil, bil yaşatan\n Cesaretim olur o zaman\n Düşünmeye içtenlikle\n Açık seçik ve hiç korkmadan\n Sonuna dek dürüst ve sevgiyle\n Boş yere değil yok inanmam\n Koşarım yine ardından\n Bulsam da olur bulmasam da\n Bu ümit beni bil yaşatan\n Boş yere değil yok inanmam\n Koşarım yine ardından\n Bulsam da olur bulmasam da\n Bu ümit beni bil, bil yaşatan`;
+            break;
+        default: 
+            gununsiiriisim="Adı Bende Saklı";
+            ses.src="music/yasanmamis-yillar.mp3";
+            gununsiiri = `Bölünür sancıyla uykular\nSığınak değil en kuytular\nGökte ay öndört ben dolunay\nSon hatıramı sinene sar\nBu kadarına razıyım yar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Dalda muhabbette kumrular\nBana ayrılığı sordular\nDedim afet, yangın, dedim kar\nDedim adet aşkı vururlar\nDedim adet aşkı vururlar\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı\n Uzak diyarlarda evli barklı\nMutluluk en çok onun hakkı\nBu yorgun kırık dökük hikayenin de\nAdı bende saklı`;
+            break;
+            
     }
 }
 
