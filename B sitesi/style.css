@@ -3,19 +3,31 @@
 
 
 :root {
-    --imgbg: #fbb6b6;
-    --nav-a-color: #b10303;
-    --nav-a-color-hov: #ff2323;
+    --nav-bg: #e094a0;
+    --imgbg: #c45161;
+    --nav-a-color: #5e62a9;
+    --nav-a-color-hov: #434279;
     --inp-border-c: #ff9494;
-    --inp-place: #ff5757;
-    --inp-border-c-focus: #b10303;
-    --bg-color: #ffc0c0;
-    --icerik-c: #b10303;
+    --inp-place: #5e62a9;
+    --inp-border-c-focus: #e094a0;
+    --bg-color: #f2b6c0;
+    --icerik-c: #434279;
+    --audio: #f2b6c0;
+}
+
+.card img {
+    border-radius: 10%;
+    background: #000;
+    height: 250px;
+    width: 300px;
+    margin: auto;
+    margin-top: 15px;
+    overflow: hidden;
 }
 
 body {
-    background-color: var(--bg-color);
-    height: 200vh;
+    background: linear-gradient(to right, #bde0fe, #ffafcc);
+    height: 100vh;
 }
 
 * {
@@ -36,13 +48,15 @@ nav div {
 }
 
 nav input {
+    width: 300px;
     border-radius: 10px;
     padding-left: 47px;
     font-size: 1.5em;
     border: none;
     border-bottom: 4px solid var(--inp-border-c);
-    background-image: url('search.png');
-    background-position: 10px 10px;
+    background-image: url('res/newsearch.png');
+    background-size: 35px 35px;
+    background-position: 8px 5px;
     background-repeat: no-repeat;
     transition: all 0.3s ease;
     color: var(--nav-a-color);
@@ -99,11 +113,36 @@ h2 {
 }
 
 nav {
-    margin-top: 20px;
-
+    margin: auto;
+    padding-top: 12px;
+    width: 100%;
+    /**/
+    background: linear-gradient(to left, #ff99c8, #7cd3ff);
+    background-color: var(--nav-bg);
     margin-right: 30px;
+
     color: var(--nav-a-color);
 }
+
+.navico img {
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navico a {
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.navico img:hover+a,
+a:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
 
 .bolum {
 
@@ -124,12 +163,70 @@ nav a {
     font-size: 1.5em;
     text-decoration: none;
     color: var(--nav-a-color);
+    transition: all ease 0.3s;
 }
+
+.onson img {
+    position: absolute;
+    height: 40px;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    top: 320px;
+    z-index: 1000;
+}
+
+.onson img:hover {
+
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+
+}
+
+#once {
+    left: 10%;
+}
+
+#sonra {
+
+    right: 10%;
+}
+
+.split {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.split>img {
+    width: 80%;
+    border-radius: 20px;
+}
+
+.splitres1 {
+
+    border-radius: 20px;
+    width: 80%;
+    z-index: 24;
+}
+
+.splitres2 {
+    z-index: 1;
+    position: absolute;
+}
+
+#splitres3 {
+    z-index: 1;
+    position: absolute;
+}
+
 
 nav a:hover {
     transition: all 0.3s ease;
-    transform: scale(1.4);
+
     color: var(--nav-a-color-hov);
+    font-size: 1.7em;
 }
 
 nav>ul>li>button,
@@ -138,12 +235,19 @@ nav>ul>li>button>img {
     background-color: transparent;
 }
 
+#logokutu {
+
+    display: flex;
+    align-items: center;
+}
+
 #logo {
     width: 100;
     height: 100px;
     overflow: hidden;
     background-color: var(--imgbg);
     border-radius: 20px;
+
 }
 
 #siirisim {
@@ -161,11 +265,11 @@ div p {
 /*ses görünüm*/
 
 audio::-webkit-media-controls-panel {
-    background-color: var(--inp-place);
+    background-color: var(--audio);
 }
 
 audio::-webkit-media-controls-play-button {
-    background-color: var(--inp-place);
+    background-color: var(--audio);
     border-radius: 50%;
 }
 
@@ -179,11 +283,11 @@ audio::-webkit-media-controls-time-remaining-display {
 
 audio::-webkit-media-controls-timeline {
     border-radius: 40px;
-    background-color: var(--inp-place);
+    background-color: var(--audio);
 }
 
 audio::-webkit-media-controls-volume-slider {
-    background-color: var(--inp-place);
+    background-color: var(--audio);
     border-radius: 50px;
 
     padding-left: 0px;
@@ -191,7 +295,7 @@ audio::-webkit-media-controls-volume-slider {
 }
 
 audio::-webkit-media-controls-mute-button {
-    background-color: var(--inp-place);
+    background-color: var(--audio);
     border-radius: 50%;
 }
 
@@ -200,7 +304,7 @@ audio::-webkit-media-controls-mute-button {
 .soruform {
     align-items: center;
     justify-content: center;
-margin-left: 0px;
+    margin-left: 0px;
 }
 
 .sanatcı {
@@ -243,12 +347,14 @@ margin-left: 0px;
     background-color: var(--inp-border-c);
     color: white;
 }
-hr{
+
+hr {
     border-top: 5px dashed red;
     width: 350px;
     margin-left: 120px;
     border-radius: 10px;
 }
+
 .sanatcı>input[type="radio"]:checked+label:before {
     height: 16px;
     width: 16px;
@@ -261,13 +367,15 @@ hr{
 
 
 /*sarki penceresi tasarım*/
-#sarkibody{
+#sarkibody {
     background-color: var(--bg-color);
 }
-.icerik{
+
+.icerik {
     margin-top: 30px;
 }
-.icerik .card{
+
+.icerik .card {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     text-align: center;
     background-color: var(--inp-border-c);
@@ -281,11 +389,182 @@ hr{
     opacity: 1;
     visibility: visible;
     transition: all ease-in 2s;
-    
+
 }
+
 .bolum.hidden {
     opacity: 0;
     visibility: hidden;
-    transition: all ease-in 0.5s; /* Görünürlük ve opasiteyi gizlerken animasyon */
-    
+    transition: all ease-in 0.5s;
+    /* Görünürlük ve opasiteyi gizlerken animasyon */
+
+}
+
+/*oyun bölümü kodalrı*/
+
+.kart {
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+    width: 16.875em;
+    height: 16.5em;
+    border-radius: 20px;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #bde0fe, #ffafcc);
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+    transition: all 0.2s;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.kart:not(:hover)::after {
+    transition: all 0.8s ease;
+    /* Geçiş yumuşak olur */
+}
+
+.kart::after {
+    content: "Oyna";
+    position: absolute;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    background: #00AC7C;
+    color: #fff;
+    height: 3em;
+    width: 100%;
+    bottom: 0;
+    transition: all 0.2s;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.kart .title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 1.875em;
+    font-weight: 400;
+    color: #000;
+}
+
+.kart .price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    font-weight: 900;
+    position: absolute;
+    left: 0.625em;
+    bottom: 0.625em;
+    color: #000000;
+}
+
+.kart:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.kart:active {
+    transform: scale(0.98);
+}
+
+.kart:active::after {
+    content: "Oynanıyor";
+    height: 3.125em;
+}
+
+.text {
+    max-width: 55px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+}
+
+.image img {
+    border-radius: 15px;
+    width: 100%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+}
+
+#yuklenmeekran {
+    display: none;
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    animation: yuklen 2s infinite;
+   
+}
+#yuklenmeekran>img {
+   height: 200px;
+   
+}
+
+/*ilk animasyon yüklenme animasyonu*/
+
+@keyframes yuklen{
+0% {
+    opacity: 0;
+}
+30%{
+    opacity: 0.7;
+}
+    50%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#oyun{
+    display: none;
+    height: 90%;
+}
+#oyun iframe{
+    height: 100%;
+    width: 100%;
+}
+#tamekran{
+    display: none;
+    height: 90%;
+    width: 100%;
+}
+#f11{
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+#f11:hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    background: rgba(135, 199, 255, 0.216);
+
+}
+#f11>img{
+    height: 30px;
+    width: 30px;
 }

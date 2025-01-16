@@ -1,124 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Panda Form</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="girisstyle.css" />
-  </head>
-  <body>
-    <div class="container">
-      <form  >
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Username here..." />
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Password here..." />
-        <button id="login">Login</button>
-      </form>
-      <div class="ear-l"></div>
-      <div class="ear-r"></div>
-      <div class="panda-face">
-        <div class="blush-l"></div>
-        <div class="blush-r"></div>
-        <div class="eye-l">
-          <div class="eyeball-l"></div>
-        </div>
-        <div class="eye-r">
-          <div class="eyeball-r"></div>
-        </div>
-        <div class="nose"></div>
-        <div class="mouth"></div>
-      </div>
-      <div class="hand-l"></div>
-      <div class="hand-r"></div>
-      <div class="paw-l"></div>
-      <div class="paw-r"></div>
-    </div>
-    <!-- Script -->
-    <script>
-    var login=document.getElementById("login");
-    let usernameRef = document.getElementById("username");
-        let passwordRef = document.getElementById("password");
-        let eyeL = document.querySelector(".eyeball-l");
-        let eyeR = document.querySelector(".eyeball-r");
-        let handL = document.querySelector(".hand-l");
-        let handR = document.querySelector(".hand-r");
-        
-login.addEventListener('click' ,()=>{
-if(usernameRef.value=="enes" && passwordRef.value=="enes123"){
-    event.preventDefault();
-    window.location.href = "ana.html";
-}
-else{
-    alert("yanlış giriş")
-}
-})
 
-        let normalEyeStyle = () => {
-          eyeL.style.cssText = `
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giriş</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="girisstyle.css" />
+  <link rel="web icon" type="png" href="res/giris.png">
+
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <label for="username">İsim :</label>
+      <input type="text" id="username" placeholder="İsim Girin..." />
+      <label for="password">Şifre :</label>
+      <input type="password" id="password" placeholder="Şifre Girin..." />
+      <button id="login">Giriş</button>
+    </form>
+    <div class="ear-l"></div>
+    <div class="ear-r"></div>
+    <div class="panda-face">
+      <div class="blush-l"></div>
+      <div class="blush-r"></div>
+      <div class="eye-l">
+        <div class="eyeball-l"></div>
+      </div>
+      <div class="eye-r">
+        <div class="eyeball-r"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="hand-l"></div>
+    <div class="hand-r"></div>
+    <div class="paw-l"></div>
+    <div class="paw-r"></div>
+  </div>
+  <!-- Script -->
+  <script>
+    var login = document.getElementById("login");
+    let usernameRef = document.getElementById("username");
+    let passwordRef = document.getElementById("password");
+    let eyeL = document.querySelector(".eyeball-l");
+    let eyeR = document.querySelector(".eyeball-r");
+    let handL = document.querySelector(".hand-l");
+    let handR = document.querySelector(".hand-r");
+
+    login.addEventListener('click', () => {
+      if ((usernameRef.value == desifreleme(isimsifre) && passwordRef.value == desifreleme(passifre)) || (usernameRef.value == desifreleme(isimsifree) && passwordRef.value == desifreleme(passifree))) {
+        event.preventDefault();
+        window.location.href = "ana.html";
+      }
+      else {
+        alert("yanlış giriş"+desifreleme(isimsifre)+desifreleme(passifre));
+        
+      }
+    })
+
+    let normalEyeStyle = () => {
+      eyeL.style.cssText = `
             left:0.6em;
             top: 0.6em;
           `;
-          eyeR.style.cssText = `
+      eyeR.style.cssText = `
           right:0.6em;
           top:0.6em;
           `;
-        };
-        
-        let normalHandStyle = () => {
-          handL.style.cssText = `
+    };
+
+    let normalHandStyle = () => {
+      handL.style.cssText = `
                 height: 2.81em;
                 top:8.4em;
                 left:7.5em;
                 transform: rotate(0deg);
             `;
-          handR.style.cssText = `
+      handR.style.cssText = `
                 height: 2.81em;
                 top: 8.4em;
                 right: 7.5em;
                 transform: rotate(0deg)
             `;
-        };
-        //When clicked on username input
-        usernameRef.addEventListener("focus", () => {
-          eyeL.style.cssText = `
+    };
+    //When clicked on username input
+    usernameRef.addEventListener("focus", () => {
+      eyeL.style.cssText = `
             left: 0.75em;
             top: 1.12em;  
           `;
-          eyeR.style.cssText = `
+      eyeR.style.cssText = `
             right: 0.75em;
             top: 1.12em;
           `;
-          normalHandStyle();
-        });
-        //When clicked on password input
-        passwordRef.addEventListener("focus", () => {
-          handL.style.cssText = `
+      normalHandStyle();
+    });
+    //When clicked on password input
+    passwordRef.addEventListener("focus", () => {
+      handL.style.cssText = `
                 height: 6.56em;
                 top: 3.87em;
                 left: 11.75em;
                 transform: rotate(-155deg);    
             `;
-          handR.style.cssText = `
+      handR.style.cssText = `
             height: 6.56em;
             top: 3.87em;
             right: 11.75em;
             transform: rotate(155deg);
           `;
-          normalEyeStyle();
-        });
-        //When clicked outside username and password input
-        document.addEventListener("click", (e) => {
-          let clickedElem = e.target;
-          if (clickedElem != usernameRef && clickedElem != passwordRef) {
-            normalEyeStyle();
-            normalHandStyle();
+      normalEyeStyle();
+    });
+    //When clicked outside username and password input
+    document.addEventListener("click", (e) => {
+      let clickedElem = e.target;
+      if (clickedElem != usernameRef && clickedElem != passwordRef) {
+        normalEyeStyle();
+        normalHandStyle();
+      }
+    });
+
+    const karakterler = [
+      // Sayılar
+      '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+
+      // Büyük harfler
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+      'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+      'U', 'V', 'W', 'X', 'Y', 'Z',
+
+      // Küçük harfler
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+      'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+      'u', 'v', 'w', 'x', 'y', 'z',
+
+      // Özel karakterler
+      '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+      '-', '_', '=', '+', '[', ']', '{', '}', ';', ':',
+      '\'', '\"', ',', '.', '/', '<', '>', '?', '\\', '|',
+
+      ' ', '`', '~'
+    ];
+
+    const kriptokrktrler = [
+      'q', 'Z', ')', '6', '!', 'a', 'O', '-', '8', '{',
+      'y', '[', '7', '%', 'E', '_', '@', '>', 'P', '}',
+      '0', 'K', '\\', 'c', 'b', ';', 'i', 'U', 'X', ']',
+      'r', 'Q', '&', 'n', 'R', '^', 'H', 'Y', '=', '2',
+      '<', '4', 'p', 'd', 's', '1', 'z', '+', 'L', 'A',
+      '#', 'v', '5', '(', '/', 'F', 'W', '3', 'I', 'M',
+      'B', 'w', 'k', '9', '*', 'f', 'C', 'm', 'G', 'u',
+      'N', '|', 'x', 'V', 'D', '?', 'T', ':', '.', 'S',
+      'l', 'h', 'g', 'o', ',', 'J', 'e', 'j', '"', '`',
+      't', ' ', '$', '!', '\'', '~'
+    ];
+
+
+    function desifreleme(sifmetin) {
+      let sademetin = "";
+      for (let i = 0; i < sifmetin.length; i++) {
+        let item = sifmetin[i];
+        for (let j = 0; j < kriptokrktrler.length; j++) {
+          if (kriptokrktrler[j] === item) {
+            sademetin += karakterler[j];
+            break;
           }
-        });</script>
-  </body>
+        }
+      }
+      return sademetin;
+    }
+    let isimsifre = "<A</";
+    let isimsifree = "As/HA";
+    let passifree = "As/HAZ)6JJ";
+    let passifre = "<A</Z)6JJ";
+
+
+
+  </script>
+</body>
+
 </html>
